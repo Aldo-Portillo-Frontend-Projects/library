@@ -55,7 +55,7 @@ tr{
   
   /* Modal Content */
   .modal-content {
-    background-color: #fefefe;
+    background-color: var(--lighter-green);
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -64,6 +64,11 @@ tr{
     flex-direction: column;
   }
   
+  .modal-content > button{
+    background-color: var(--light-brown);
+    color: var(--lighter-green);
+  }
+
   /* The Close Button */
   .close {
     color: #aaaaaa;

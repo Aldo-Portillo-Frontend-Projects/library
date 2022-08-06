@@ -39,8 +39,6 @@ tr{
 }
 
 
-
-
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -62,6 +60,8 @@ tr{
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    display: flex;
+    flex-direction: column;
   }
   
   /* The Close Button */

@@ -1,4 +1,4 @@
-const btn = document.querySelector('#button');
+const btn = document.querySelector('#button-newBook');
 const table = document.querySelector('#table')
 
 btn.addEventListener('click', () => {
@@ -25,3 +25,20 @@ btn.addEventListener('click', () => {
     table.appendChild(newTableRow)
   });
 
+  const modal = document.getElementById("myModal");
+  
+  const span = document.getElementsByClassName("close")[0];
+  
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }

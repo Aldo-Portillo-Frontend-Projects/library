@@ -59,17 +59,8 @@ const modal = document.getElementById("myModal");
 
 //Button inside the modal
 btnSubmit.addEventListener('click', () => {
-  //Imports form values
-
-  console.log(document.querySelector("#name").value)
-  console.log(document.querySelector("#author").value)
-  console.log(document.querySelector("#pages").value)
-  console.log(document.querySelector("#read").value)
-
-  //Creates new instance
+  //Creates new instance using form inputs
   let newBook = new Book(document.querySelector("#name").value, document.querySelector("#author").value, document.querySelector("#pages").value, document.querySelector("#read").value);
-
-  console.log(newBook)
 
     //calls the values of table to update the table
     let newTableRow = document.createElement('tr');
@@ -78,11 +69,11 @@ btnSubmit.addEventListener('click', () => {
     let pages = document.createElement('td');
     let read = document.createElement('td');
 
-    //
-    bookName.textContent = book2.title;
-    author.textContent = book2.author;
-    pages.textContent = book2.pages;
-    read.textContent = book2.read;
+    //Updates the DOM
+    bookName.textContent = newBook.title;
+    author.textContent = newBook.author;
+    pages.textContent = newBook.pages;
+    read.textContent = newBook.read;
 
 
     //appends the values

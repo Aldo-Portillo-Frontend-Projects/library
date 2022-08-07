@@ -32,7 +32,7 @@ let book2 = new Book("42 Laws of Power", "Robert Greene", 4200, true);
 
 console.log(book2)
 
-
+//Opens modal
 const modal = document.getElementById("myModal");
   
   const span = document.getElementsByClassName("close")[0];
@@ -54,15 +54,27 @@ const modal = document.getElementById("myModal");
     }
   }
 
-btnSubmit.addEventListener('click', () => {
 
+  //Now have the submit button create a new object with the inputs
+
+//Button inside the modal
+btnSubmit.addEventListener('click', () => {
+  //Imports form values
+
+  console.log(document.querySelector("#name").value)
+  console.log(document.querySelector("#author").value)
+  console.log(document.querySelector("#pages").value)
+  console.log(document.querySelector("#read").value)
+
+  //Creates new instance
+  let newBook = new Book()
+
+    //calls the values of table to update the table
     let newTableRow = document.createElement('tr');
     let bookName = document.createElement('td');
     let author = document.createElement('td');
     let pages = document.createElement('td');
     let read = document.createElement('td');
-
-    //Add code to it to add values later for now add dummy values
 
     //
     bookName.textContent = book2.title;
@@ -71,6 +83,7 @@ btnSubmit.addEventListener('click', () => {
     read.textContent = book2.read;
 
 
+    //appends the values
     newTableRow.appendChild(bookName)
     newTableRow.appendChild(author)
     newTableRow.appendChild(pages)

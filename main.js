@@ -67,7 +67,9 @@ btnSubmit.addEventListener('click', () => {
   console.log(document.querySelector("#read").value)
 
   //Creates new instance
-  let newBook = new Book()
+  let newBook = new Book(document.querySelector("#name").value, document.querySelector("#author").value, document.querySelector("#pages").value, document.querySelector("#read").value);
+
+  console.log(newBook)
 
     //calls the values of table to update the table
     let newTableRow = document.createElement('tr');

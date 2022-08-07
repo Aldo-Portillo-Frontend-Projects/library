@@ -15,20 +15,20 @@ function Book(title,author,pages,read){
   }
 }
 
-//Sample Object without using constructor
+// //Sample Object without using constructor
 
-let book1 = {
-  title: "42 Laws of Power",
-  author: "Robert Greene",
-  pages: 420,
-  read: true,
-}
+// let book1 = {
+//   title: "42 Laws of Power",
+//   author: "Robert Greene",
+//   pages: 420,
+//   read: true,
+// }
 
-console.log(book1)
+// console.log(book1)
 
 //Create Object using constructor
 
-let book2 = new Book("42 Laws of Power", "Robert Greene", 420, true);
+let book2 = new Book("42 Laws of Power", "Robert Greene", 4200, true);
 
 console.log(book2)
 
@@ -65,10 +65,10 @@ btnSubmit.addEventListener('click', () => {
     //Add code to it to add values later for now add dummy values
 
     //
-    bookName.textContent = "42 Laws of Power";
-    author.textContent = "Robert Green";
-    pages.textContent = "420";
-    read.textContent = "true";
+    bookName.textContent = book2.title;
+    author.textContent = book2.author;
+    pages.textContent = book2.pages;
+    read.textContent = book2.read;
 
 
     newTableRow.appendChild(bookName)

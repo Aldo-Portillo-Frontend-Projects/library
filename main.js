@@ -1,6 +1,7 @@
 const btnNew = document.querySelector('#button-newBook');
 const btnSubmit = document.querySelector('#submit-modal');
 const table = document.querySelector('#table');
+const form = document.querySelector('form')
 
 //Create Object Constructor 
 
@@ -14,23 +15,6 @@ function Book(title,author,pages,read){
       return `${title} by ${author}, ${pages} pages, ${read ? 'read': 'not read yet'}.`
   }
 }
-
-// //Sample Object without using constructor
-
-// let book1 = {
-//   title: "42 Laws of Power",
-//   author: "Robert Greene",
-//   pages: 420,
-//   read: true,
-// }
-
-// console.log(book1)
-
-//Create Object using constructor
-
-let book2 = new Book("42 Laws of Power", "Robert Greene", 4200, true);
-
-console.log(book2)
 
 //Opens modal
 const modal = document.getElementById("myModal");
@@ -82,4 +66,6 @@ btnSubmit.addEventListener('click', () => {
     newTableRow.appendChild(pages)
     newTableRow.appendChild(read)
     table.appendChild(newTableRow)
+
+    //resets form 
   });

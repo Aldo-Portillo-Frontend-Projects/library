@@ -68,4 +68,5 @@ btnSubmit.addEventListener('click', () => {
     table.appendChild(newTableRow)
 
     //resets form 
+    form.reset()
   });

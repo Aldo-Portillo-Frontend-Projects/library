@@ -54,7 +54,7 @@ tr{
   }
   
   /* Modal Content */
-  .modal-content {
+  .modal-content, form {
     background-color: var(--lighter-green);
     margin: auto;
     padding: 20px;

@@ -39,15 +39,18 @@
             <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <label for="name-input">Title</label>
-                <input type="text" name="name-input" id="name">
-                <label for="author-input">Author</label>
-                <input type="text" name="author-input" id="author">
-                <label for="pages-input">Pages</label>
-                <input type="number" name="pages-input" id="pages">
-                <label for="read-input">Read?</label>
-                <input type="text" name="read-input" id="read">
+                <form action="./main.js" method="post">
+                    <label for="name-input">Title</label>
+                    <input type="text" name="name-input" id="name">
+                    <label for="author-input">Author</label>
+                    <input type="text" name="author-input" id="author">
+                    <label for="pages-input">Pages</label>
+                    <input type="number" name="pages-input" id="pages">
+                    <label for="read-input">Read?</label>
+                    <input type="text" name="read-input" id="read">
+                </form>
                 <button id="submit-modal">Enter Book</button>
+
             </div>
         </div>
 </body>
